@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Titulo da Pagina</title>
+    <title>Listagem de Jogos</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="estilos/estilo.css" />
 </head>
