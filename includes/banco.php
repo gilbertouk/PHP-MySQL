@@ -15,7 +15,7 @@
     $banco->query("SET character_set_results=utf8");
 
 
-
+    //Criando uma query de busca no banco de dados.
     $busca = $banco->query("select * from generos");
     if(!$busca){
         echo "<p>Falha na busca! $banco->error</p>";
