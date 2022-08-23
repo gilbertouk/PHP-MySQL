@@ -2,12 +2,20 @@ body {
     background-color: #ddd;
     font-family: Tahoma;
 }
+header {
+    font-size: 13px;
+    text-align: right;
+}
 div#corpo {
     width: 800px;
     margin: auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 30px #777;
+}
+form#busca {
+    font-size: 13px;
+    text-align: right;
 }
 table.listagem {
     width: 100%;
@@ -35,7 +43,7 @@ table.detalhes {
 table.detalhes td {
     padding: 10px;
     vertical-align: top;
-    border: 1px solid black;
+   /* border: 1px solid black; */
 }
 td.descricao {
     text-align: justify;    
@@ -48,4 +56,9 @@ img.full {
 }
 img.icoback {
     width: 50px;
+}
+footer {
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
 }
