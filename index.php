@@ -10,6 +10,7 @@
         require_once "includes/banco.php";
         require_once "includes/funcoes.php";
         $ordem = $_GET['o'] ?? "n";
+        $chave = $_GET['c'] ?? "";
     ?>
     <div id="corpo">
         <?php include_once "topo.php"; ?>
@@ -20,12 +21,17 @@
             <a href="index.php?o=p">Produtora</a> | 
             <a href="index.php?o=n1">Nota Alta</a> | 
             <a href="index.php?o=n2">Nota baixa</a> |
+            <a href="index.php"> Mostrar Todos</a> |
             Buscar: <input type="text" name="c" size="10" maxlength="40">
             <input type="submit" value="Ok">
         </form>
         <table class="listagem">
             <?php
                 $q = "select j.cod, j.nome, g.genero, p.produtora, j.capa from jogos j join generos g on j.genero = g.cod join produtoras p on j.produtora = p.cod ";
+
+                if (!empty($chave)) {
+                    $q .= "WHERE j.nome like '%$chave%' OR p.produtora like '%$chave%' OR g.genero like '%$chave%'";
+                }
 
                 switch ($ordem) {
                     case "p":
