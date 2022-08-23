@@ -32,9 +32,20 @@ table.listagem td:nth-child(3) {
 table.detalhes {
     width: 100%;
 }
+table.detalhes td {
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid black;
+}
+td.descricao {
+    text-align: justify;    
+}
 img.mini {
     width: 50px;
 }
-img.capa {
-    width: 250px;
+img.full {
+    width: 300px;
+}
+img.icoback {
+    width: 50px;
 }

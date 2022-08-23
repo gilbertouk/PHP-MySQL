@@ -24,16 +24,18 @@
                     if ($busca->num_rows == 1) {
                         $reg = $busca->fetch_object();
                         $t = thumb($reg->capa);
-                        echo "<tr><td rowspan='3'><img src='$t' class='capa' />";
+                        echo "<tr><td rowspan='3'><img src='$t' class='full' />";
                         echo "<td><h2>$reg->nome</h2>";
-                        echo "<tr><td>$reg->descricao";
+                        echo "Nota: " . number_format($reg->nota , 1) . "/10.0";
+                        echo "<tr><td class='descricao'>$reg->descricao";
                         echo "<tr><td>Adm";
                     } else {
                         echo "<tr><td>Nenhum registro encontrado!";
                     }
                 }
             ?>
-        </table>        
+        </table>  
+        <a href="index.php"><img src="icones/icoback.png" class='icoback' /></a>
     </div>
 </body>
 </html>
