@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+<?php
+    require_once "includes/banco.php";
+    require_once "includes/funcoes.php";
+?>
 <html lang="pt-br">
 <head>
     <title>Titulo da Pagina</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="estilos/estilo.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <?php
-        require_once "includes/banco.php";
-        require_once "includes/funcoes.php";
-    ?>
     <div id="corpo">
         <?php 
             require_once "topo.php";
@@ -36,7 +37,7 @@
                 }
             ?>
         </table>  
-        <a href="index.php"><img src="icones/icoback.png" class='icoback' /></a>
+        <?php echo voltar() ?>
     </div>
     <?php include_once "rodape.php"; ?>
 </body>
