@@ -23,6 +23,7 @@
                         echo msg_sucesso(" Dados foram recebidos!");
                     }
                 }
+            echo voltar();
             ?>
         </div>
         <?php require_once "rodape.php" ?>
